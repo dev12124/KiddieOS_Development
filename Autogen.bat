@@ -2,7 +2,8 @@ ECHO OFF
 cls
 
 cd /
-cd Users\USER\Desktop\D.S.O.S\KiddieOS
+cd Projects\KiddieOS_Development\
+::cd Users\USER\Desktop\D.S.O.S\KiddieOS
 
 setlocal enabledelayedexpansion
 
@@ -146,7 +147,7 @@ set /A "W=0"
 	set /p Choose=
 	if %Choose% EQU 1 VBoxManage.exe startvm  --putenv VBOX_GUI_DBG_ENABLED=true KiddieOS_USB
 	if %Choose% EQU 2 VBoxManage.exe startvm  --putenv VBOX_GUI_DBG_ENABLED=true KiddieOS_VHD
-	if %Choose% EQU 3 qemu-system-i386 -drive format=raw,file=C:\Users\USER\Desktop\D.S.O.S\KiddieOS\ISO\KiddieOS.vhd -m 2000M -boot order=dc -cpu core2duo -vga std -accel tcg,thread=single -smp 1 -audiodev id=sdl,driver=sdl -machine pcspk-audiodev=sdl
+	if %Choose% EQU 3 qemu-system-i386 -drive format=raw,file=C:\Projects\KiddieOS_Development\ISO\KiddieOS.vhd -m 2000M -boot order=dc -cpu core2duo -vga std -accel tcg,thread=single -smp 1 -audiodev id=sdl,driver=sdl -machine pcspk-audiodev=sdl
 	
 	cecho {\n}
 	goto END

@@ -846,7 +846,8 @@ ret
 wait_to_read:
      in al, 0x64
      and al, 00100001b
-     jz wait_to_read
+	 cmp al, 0x21
+     jnz wait_to_read
 ret
 
 send_command:
