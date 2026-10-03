@@ -404,6 +404,12 @@ Set_Bit:
   ; Retorna 
   ret ; A CPU não executa mais Código 
   ; dessa Função agora
+  ; Notas:
+  ; Em ESI e EDI, a 
+  ; Função poderá receber uma 
+  ; String. Provavelmente tem bugs,
+  ; mas futuramente iremos discutir
+  ; sobre isso para corrigir
   
 Print_String32:
 	pop 	ebx
